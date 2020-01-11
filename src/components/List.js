@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Item from "./Item"
 import Loading from "./Loading";
+import { ListGroup } from 'react-bootstrap';
 
 class List extends Component {
   constructor(props) {
@@ -15,8 +16,8 @@ class List extends Component {
       return <Loading/>
     }
     const series = this.state.series;
-    return <ol>{series.map(
-        (serie, index) => <Item key={index} serie={serie}/>)}</ol>
+    return <ListGroup>{series.map(
+        (serie, index) => <Item key={index} serie={serie}/>)}</ListGroup >
   };
 
   componentDidMount() {
@@ -28,6 +29,5 @@ class List extends Component {
       .then(data => this.setState({series: data}));
     }
   }
-
 
 export default List

@@ -5,10 +5,12 @@ import NavigationBar from "./NavigationBar"
 
 class App extends Component {
   render() {
-    return <div>
+    return <div className="page-container">
       <NavigationBar title={"Serienator"}/>
-      <List/>
-          </div>
+      <main className="main">
+        <List/>
+      </main>
+    </div>
   };
 }
 
