@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import Item from "./Item"
-import Loading from "./Loading";
 import { ListGroup } from 'react-bootstrap';
 
 class List extends Component {
