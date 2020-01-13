@@ -1,16 +1,18 @@
 import React, {Component} from "react";
-import List from "./List"
+import Series from "./Series"
 import './../styles/App.css';
-import NavigationBar from "./NavigationBar"
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import Favorites from "./Favoritess";
+import Page from "./Page";
 
 class App extends Component {
   render() {
-    return <div className="page-container">
-      <NavigationBar title={"Serienator"}/>
-      <main className="main">
-        <List/>
-      </main>
-    </div>
+    return <BrowserRouter>
+        <Switch>
+          <Route exact path='/' component={() => <Page><Series/></Page>}/>
+          <Route exact path='/fav' component={() => <Page><Favorites/></Page>}/>
+        </Switch>
+    </BrowserRouter>
   };
 }
 
