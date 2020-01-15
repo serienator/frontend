@@ -16,7 +16,7 @@ export default class Detail extends Component {
         </Modal.Body>
 
         <Modal.Footer>
-          <Button variant="secondary">Close</Button>
+          <Button variant="secondary" onClick={this.props.close} >Close</Button>
         </Modal.Footer>
       </Modal.Dialog>
     </div>
